@@ -1,0 +1,215 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="IE=edge" http-equiv="X-UA-Compatible">
+                <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+                    <meta content="" name="description">
+                        <meta content="" name="author">
+                            <meta content="yes" name="mobile-web-app-capable">
+                                <meta content="yes" name="apple-mobile-web-app-capable">
+                                    <title>
+                                        Control Center
+                                    </title>
+                                    <!-- Bootstrap -->
+                                    <!-- Latest compiled and minified CSS -->
+                                    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
+                                        <!-- Optional theme -->
+                                        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet">
+                                            <!-- Latest compiled and minified JavaScript -->
+                                            <script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+                                            </script>
+                                            <script crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+                                            </script>
+                                            <meta content="#ffffff" name="msapplication-TileColor">
+                                                <meta content="img/ms-icon-144x144.png" name="msapplication-TileImage">
+                                                    <meta content="#ffffff" name="theme-color">
+                                                        <meta content="white" name="apple-mobile-web-app-status-bar-style">
+                                                            <meta content="telephone=no" name="format-detection">
+                                                                <style>
+                                                                    body {
+        padding-top: 50px;
+    }
+    .starter-template {
+        padding: 40px 15px;
+        text-align: center;
+    }
+    .unselectable {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+                                                                </style>
+                                                            </meta>
+                                                        </meta>
+                                                    </meta>
+                                                </meta>
+                                            </meta>
+                                        </link>
+                                    </link>
+                                </meta>
+                            </meta>
+                        </meta>
+                    </meta>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body class="unselectable">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+                        <span class="sr-only">
+                            Toggle navigation
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                    </button>
+                    <a class="navbar-brand" href="control-center.html">
+                        Control Center
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="cc-schedules.html">
+                                Schedules
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cc-shortcuts.html">
+                                Shortcuts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                About
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="starter-template">
+                <h3 style="color: #44444444; text-shadow: 0px 0px 0px #999999;">
+                    <span class="deviceName">
+                        Speaker
+                    </span>
+                </h3>
+                <p>
+                    <br><br><br><br><br>
+                    Status:
+                    <span id="status">
+                        Offline
+                    </span>
+                </p>
+                <p>
+                    <br><br>
+                    <button class="btn btn-default btn-lg btn-block" id="switch">Connect</button>
+                </p>
+                <p>
+                    <br><br><br><br><br>
+                    <a href="control-center.html" class="btn btn-link">Back to Home</a>
+                </p>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <h4 class="modal-title">
+                            Add to Shortcut
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <input type="checkbox">
+                                    Living Room Lights
+                                </input>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox">
+                                    My Speakers
+                                </input>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox">
+                                    AC Switch
+                                </input>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal" type="button">
+                            Close
+                        </button>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button">
+                            Save
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!-- /.container -->
+        <div class="footer navbar-fixed-bottom">
+            <p class="text-right">
+                <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
+                    <span class="glyphicon glyphicon-plus">
+                    </span>
+                    Add to Shortcut
+                </button>
+            </p>
+        </div>
+        <!-- Page Functions -->
+    </body>
+    <script>
+        $(window).ready(function(){
+            var deviceName = getUrlParameter('d');
+            $('.deviceName').html(deviceName);
+
+            $('#switch').click(function(){
+                var current = $(this).text();
+                if(current == 'Turn Off') {
+                    $(this).text('Turn On');
+                    $('#status').html('Off');
+                } else {
+                    $(this).text('Turn Off');
+                    $('#status').html('On');
+                }
+            });
+
+        });
+
+        function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+        };
+    </script>
+</html>
