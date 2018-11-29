@@ -96,40 +96,50 @@
                     </li>
                     <li>
                         <a href="#">
-                            Light
+                            AC
                         </a>
                     </li>
                 </ol>
             </div>
             <div class="starter-template">
                 <h3 style="color: #44444444; text-shadow: 0px 0px 0px #999999;">
-                    <span class="deviceName">
-                        Light
-                    </span>
+                    Air Conditioner and Heater
                 </h3>
                 <p>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
                     Status:
                     <span id="status">
-                        On
+                        Online
                     </span>
                     <br/>
                     <br/>
+                    Temp Set to:
+                    <span id="tempSetTo">72</span>F
                     <br/>
                     <br/>
+                    Current Temp:
+                        71F
                 </p>
                 <p>
                     <br/>
-                    <button class="btn btn-default btn-lg btn-block" id="switch">
-                        Turn Off
+                    <br/>
+                    <button id="highBtn" class="btn btn-warning btn-lg btn-block" type="button">
+                        Higher
+                    </button>
+                    <button id="lowBtn" class="btn btn-primary btn-lg btn-block" type="button">
+                        Lower
                     </button>
                 </p>
                 <p>
-                    <br/>
-                    <br/>
+                    <button id="offBtn" class="btn btn-danger btn-lg btn-block" type="button">
+                        Turn Off
+                    </button>
+                    <button id="onBtn" class="btn btn-success btn-lg btn-block" type="button">
+                        Turn On
+                    </button>
+                </p>
+                <p>
                     <br/>
                     <br/>
                     <a class="btn btn-link" href="control-center.html">
@@ -188,9 +198,9 @@
         <div class="footer navbar-fixed-bottom">
             <p class="text-right">
                 <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
-                    <span class="glyphicon glyphicon-plus">
+                    <span class="glyphicon glyphicon-time">
                     </span>
-                    Add to Shortcut
+                    Setup Schedule
                 </button>
             </p>
         </div>
@@ -198,18 +208,29 @@
     </body>
     <script>
         $(window).ready(function(){
-            var deviceName = getUrlParameter('d');
-            $('.deviceName').html(deviceName);
 
-            $('#switch').click(function(){
-                var current = $(this).text();
-                if(current == 'Turn Off') {
-                    $(this).text('Turn On');
-                    $('#status').html('Off');
-                } else {
-                    $(this).text('Turn Off');
-                    $('#status').html('On');
-                }
+            $('#onBtn').hide();
+
+            $('#highBtn').click(function(){
+                var currentTemp = $('#tempSetTo').text();
+                $('#tempSetTo').text(parseInt(currentTemp)+1);
+            });
+
+            $('#lowBtn').click(function(){
+                var currentTemp = $('#tempSetTo').text();
+                $('#tempSetTo').text(parseInt(currentTemp)-1);
+            });
+
+            $('#offBtn').click(function(){
+                $('#offBtn').hide();
+                $('#onBtn').show();
+                $('#status').html('Off');
+            });
+
+            $('#onBtn').click(function(){
+                $('#offBtn').show();
+                $('#onBtn').hide();
+                $('#status').html('Online');
             });
 
         });

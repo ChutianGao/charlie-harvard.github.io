@@ -1,49 +1,51 @@
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Digit Paper</title>
-
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <meta name="format-detection" content="telephone=no">
-    <style>
-    body {
-        padding-top: 50px;
-    }
-    .starter-template {
-        padding: 40px 15px;
-        text-align: center;
-    }
-    .unselectable {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    </style>
-</head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <meta content="yes" name="mobile-web-app-capable"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <title>
+            Control Center
+        </title>
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
+        <!-- Optional theme -->
+        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet"/>
+        <!-- Latest compiled and minified JavaScript -->
+        <script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+        </script>
+        <meta content="#ffffff" name="msapplication-TileColor"/>
+        <meta content="img/ms-icon-144x144.png" name="msapplication-TileImage"/>
+        <meta content="#ffffff" name="theme-color"/>
+        <meta content="white" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <style>
+            body {
+                padding-top: 50px;
+            }
+            .starter-template {
+                padding: 0px 15px;
+                text-align: center;
+            }
+            .bread {
+                padding: 40px 15px;
+            }
+            .unselectable {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+        </style>
+    </head>
     <body class="unselectable">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -85,6 +87,20 @@
             </div>
         </nav>
         <div class="container">
+            <div class="bread">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="control-center.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            iRobot
+                        </a>
+                    </li>
+                </ol>
+            </div>
             <div class="starter-template">
                 <h3 style="color: #44444444; text-shadow: 0px 0px 0px #999999;">
                     iRobot
@@ -108,16 +124,25 @@
                 </p>
                 <p>
                     <button class="btn btn-default btn-lg btn-block">
-                        Back to Base
+                        Stop Cleaning and Move to Base
                     </button>
                 </p>
                 <p>
-                    <br><br><br><br><br>
+                    <br/><br/><br/><br/><br/>
                     <a href="control-center.html" class="btn btn-link">Back to Home</a>
                 </p>
             </div>
         </div>
         <!-- /.container -->
+        <div class="footer navbar-fixed-bottom">
+            <p class="text-right">
+                <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
+                    <span class="glyphicon glyphicon-time">
+                    </span>
+                    Setup Schedule
+                </button>
+            </p>
+        </div>
     
         <!-- Page Functions -->
     </body>
