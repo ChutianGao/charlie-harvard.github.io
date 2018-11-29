@@ -44,6 +44,9 @@
                 -ms-user-select: none;
                 user-select: none;
             }
+            input[type=number]{
+                width: 40px;
+            } 
         </style>
     </head>
     <body class="unselectable">
@@ -113,15 +116,17 @@
                     <br/>
                     <br/>
                     Status:
-                    <span id="status">On</span>
+                    <span id="status">
+                        On
+                    </span>
                     <br/>
                     <br/>
                 </p>
                 <p>
-                    <button id="offBtn" class="btn btn-danger btn-lg btn-block" type="button">
+                    <button class="btn btn-danger btn-lg btn-block" id="offBtn" type="button">
                         Turn Off
                     </button>
-                    <button id="onBtn" class="btn btn-success btn-lg btn-block" type="button">
+                    <button class="btn btn-success btn-lg btn-block" id="onBtn" type="button">
                         Turn On
                     </button>
                 </p>
@@ -143,54 +148,121 @@
                             </span>
                         </button>
                         <h4 class="modal-title">
-                            Add to Shortcut
+                            Schedule
                         </h4>
                     </div>
                     <div class="modal-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    Living Room Lights
-                                </input>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    My Speakers
-                                </input>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    AC Switch
-                                </input>
-                            </li>
-                        </ul>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Action
+                            </label>
+                            <select class="form-control">
+                                <option>
+                                    Turn On
+                                </option>
+                                <option>
+                                    Turn Off
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">
+                                Day of the Week
+                            </label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Sunday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Monday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Tuesday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Wednesday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Thursday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Friday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Saturday
+                                    </input>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Time
+                            </label>
+                            <input type="number" value="8"/>:<input type="number" value="30"/>
+                            <select style="width:60">
+                                <option>
+                                    AM
+                                </option>
+                                <option>
+                                    PM
+                                </option>
+                            </select>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-default" data-dismiss="modal" type="button">
-                            Close
+                            Dismiss
                         </button>
                         <button class="btn btn-primary" data-dismiss="modal" type="button">
                             Save
                         </button>
                     </div>
                 </div>
-                <!-- /.modal-content -->
+                    <!-- /.modal-content -->
             </div>
-            <!-- /.modal-dialog -->
+                <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        <!-- /.container -->
-        <div class="footer navbar-fixed-bottom">
-            <p class="text-right">
-                <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
-                    <span class="glyphicon glyphicon-time">
-                    </span>
-                    Setup Schedule
-                </button>
-            </p>
+
+            <!-- /.container -->
+            <div class="footer navbar-fixed-bottom">
+                <p class="text-right">
+                    <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
+                        <span class="glyphicon glyphicon-time">
+                        </span>
+                        Setup Schedule
+                    </button>
+                </p>
+            </div>
+            <!-- Page Functions -->
         </div>
-        <!-- Page Functions -->
     </body>
+
     <script>
         $(window).ready(function(){
             $('#onBtn').hide();
