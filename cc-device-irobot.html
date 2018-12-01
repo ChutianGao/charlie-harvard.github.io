@@ -44,6 +44,9 @@
                 -ms-user-select: none;
                 user-select: none;
             }
+            input[type=number]{
+                width: 40px;
+            }
         </style>
     </head>
     <body class="unselectable">
@@ -70,11 +73,6 @@
                         <li>
                             <a href="cc-schedules.html">
                                 Schedules
-                            </a>
-                        </li>
-                        <li>
-                            <a href="cc-shortcuts.html">
-                                Shortcuts
                             </a>
                         </li>
                         <li>
@@ -111,9 +109,11 @@
                     Battery Level: 34%
                     
                 </p>
-                <p>
+                <h3 class="text-muted">
                     Status: <span id="status">Working in progress</span>
-                </p>
+                    <br/>
+                    <br/>
+                </h3>
                 <p>
                     <button id="stopBtn" class="btn btn-danger btn-lg btn-block">
                         Stop
@@ -136,13 +136,128 @@
         <!-- /.container -->
         <div class="footer navbar-fixed-bottom">
             <p class="text-right">
-                <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
+                <button class="btn btn-default" data-target="#newScheduleModal" data-toggle="modal">
                     <span class="glyphicon glyphicon-time">
                     </span>
                     Setup Schedule
                 </button>
             </p>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="newScheduleModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <h4 class="modal-title">
+                            New Schedule
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Action
+                            </label>
+                            <select class="form-control">
+                                <option>
+                                    Fast Clean (15 min)
+                                </option>
+                                <option>
+                                    Regular Clean (60 min)
+                                </option>
+                                <option>
+                                    Deep Clean (90 min)
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">
+                                Day of the Week
+                            </label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Sunday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Monday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Tuesday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Wednesday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Thursday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Friday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Saturday
+                                    </input>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Time
+                            </label>
+                            <input type="number" value="8"/>:<input type="number" value="30"/>
+                            <select style="width:60">
+                                <option>
+                                    AM
+                                </option>
+                                <option>
+                                    PM
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal" type="button">
+                            Dismiss
+                        </button>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button">
+                            Save
+                        </button>
+                    </div>
+                </div>
+                    <!-- /.modal-content -->
+            </div>
+                <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
     
         <!-- Page Functions -->
     </body>

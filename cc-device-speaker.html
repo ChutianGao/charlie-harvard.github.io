@@ -73,11 +73,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="cc-shortcuts.html">
-                                Shortcuts
-                            </a>
-                        </li>
-                        <li>
                             <a href="about.html">
                                 About
                             </a>
@@ -107,22 +102,28 @@
                         Speaker
                     </span>
                 </h3>
-                <p>
                     <br/>
                     <br/>
                     <br/>
                     <br/>
                     <br/>
-                    Status:
-                    <span id="status">
-                        Offline
+                <h3>
+                    <span class="muted">
+                        Status:
+                        <span id="status">
+                            Offline
+                        </span>
                     </span>
-                </p>
+                    <br/>
+                    <br/>
+                </h3>
+                
                 <p>
-                    <br/>
-                    <br/>
-                    <button class="btn btn-default btn-lg btn-block" id="switch">
+                    <button class="btn btn-primary btn-lg btn-block" id="onBtn">
                         Connect
+                    </button>
+                    <button class="btn btn-danger btn-lg btn-block" id="offBtn">
+                        Disconnect
                     </button>
                 </p>
                 <p>
@@ -133,78 +134,27 @@
                 </p>
             </div>
         </div>
-        <div class="modal fade" id="myModal" role="dialog" tabindex="-1">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                            <span aria-hidden="true">
-                                ×
-                            </span>
-                        </button>
-                        <h4 class="modal-title">
-                            Add to Shortcut
-                        </h4>
-                    </div>
-                    <div class="modal-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    Living Room Lights
-                                </input>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    My Speakers
-                                </input>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    AC Switch
-                                </input>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-default" data-dismiss="modal" type="button">
-                            Close
-                        </button>
-                        <button class="btn btn-primary" data-dismiss="modal" type="button">
-                            Save
-                        </button>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
         <!-- /.container -->
-        <div class="footer navbar-fixed-bottom">
-            <p class="text-right">
-                <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
-                    <span class="glyphicon glyphicon-time">
-                    </span>
-                    Setup Schedule
-                </button>
-            </p>
-        </div>
+
         <!-- Page Functions -->
     </body>
     <script>
         $(window).ready(function(){
+            $('#offBtn').hide();
+
             var deviceName = getUrlParameter('d');
             $('.deviceName').html(deviceName);
 
-            $('#switch').click(function(){
-                var current = $(this).text();
-                if(current == 'Turn Off') {
-                    $(this).text('Turn On');
-                    $('#status').html('Off');
-                } else {
-                    $(this).text('Turn Off');
-                    $('#status').html('On');
-                }
+            $('#offBtn').click(function(){
+                $('#offBtn').hide();
+                $('#onBtn').show();
+                $('#status').html('Off');
+            });
+
+            $('#onBtn').click(function(){
+                $('#offBtn').show();
+                $('#onBtn').hide();
+                $('#status').html('On');
             });
 
         });

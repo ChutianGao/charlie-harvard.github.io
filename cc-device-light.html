@@ -15,6 +15,10 @@
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
         <!-- Optional theme -->
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet"/>
+       
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
         <!-- Latest compiled and minified JavaScript -->
         <script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
         </script>
@@ -76,11 +80,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="cc-shortcuts.html">
-                                Shortcuts
-                            </a>
-                        </li>
-                        <li>
                             <a href="about.html">
                                 About
                             </a>
@@ -110,18 +109,21 @@
                         Light
                     </span>
                 </h3>
-                <p>
                     <br/>
                     <br/>
+                    
                     <br/>
                     <br/>
-                    Status:
-                    <span id="status">
-                        On
+                <h3>
+                    <span class="text-muted">Status:
+                        <span id="status">
+                            On
+                        </span>
                     </span>
                     <br/>
                     <br/>
-                </p>
+                </h3>
+                
                 <p>
                     <button class="btn btn-danger btn-lg btn-block" id="offBtn" type="button">
                         Turn Off
@@ -138,7 +140,8 @@
                 </p>
             </div>
         </div>
-        <div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+        <!-- Modal -->
+        <div class="modal fade" id="newScheduleModal" role="dialog" tabindex="-1">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -148,7 +151,7 @@
                             </span>
                         </button>
                         <h4 class="modal-title">
-                            Schedule
+                            New Schedule
                         </h4>
                     </div>
                     <div class="modal-body">
@@ -252,7 +255,7 @@
             <!-- /.container -->
             <div class="footer navbar-fixed-bottom">
                 <p class="text-right">
-                    <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
+                    <button class="btn btn-default" data-target="#newScheduleModal" data-toggle="modal">
                         <span class="glyphicon glyphicon-time">
                         </span>
                         Setup Schedule
