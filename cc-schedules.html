@@ -31,8 +31,11 @@
         padding-top: 50px;
     }
     .starter-template {
-        padding: 40px 15px;
+        padding: 0px 15px;
         text-align: center;
+    }
+    .bread {
+        padding: 20px 15px 5px 15px;
     }
     .unselectable {
         -webkit-touch-callout: none;
@@ -71,11 +74,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="cc-shortcuts.html">
-                                Shortcuts
-                            </a>
-                        </li>
-                        <li>
                             <a href="about.html">
                                 About
                             </a>
@@ -85,6 +83,20 @@
             </div>
         </nav>
         <div class="container">
+            <div class="bread">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="control-center.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Schedules
+                        </a>
+                    </li>
+                </ol>
+            </div>
             <div class="starter-template">
                 <h3 style="color: #44444444; text-shadow: 0px 0px 0px #999999;">
                     Schedules
@@ -94,23 +106,23 @@
                     <div class="panel-body">
                         <h4>Weekday Morning</h4>
                         <h5>At 8:30 am</h5>
-                        <h6>All lights - Off</h6>
+                        <h4 class="text-muted">Bedroom Night Stand - On</h4>
                     </div>
                 </div>
                 
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h4>Thuresday Morning</h4>
-                        <h5>At 9:00 am</h5>
-                        <h6>iRobot - Start</h6>
+                        <h4>Weekend</h4>
+                        <h5>At 10:30 am</h5>
+                        <h4 class="text-muted">iRobot - Regular Clean</h4>
                     </div>
                 </div>
 
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h4>Saturday Afternoon</h4>
-                        <h5>At 1:00 pm</h5>
-                        <h6>AC - 55F</h6>
+                        <h4>Weekend Evening</h4>
+                        <h5>At 11:30 pm</h5>
+                        <h4 class="text-muted">Living Room Stand Lamp - Off</h4>
                     </div>
                 </div>
             </div>

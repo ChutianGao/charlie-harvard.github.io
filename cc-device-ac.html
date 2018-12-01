@@ -15,6 +15,9 @@
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
         <!-- Optional theme -->
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet"/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
         <!-- Latest compiled and minified JavaScript -->
         <script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
         </script>
@@ -34,7 +37,7 @@
                 text-align: center;
             }
             .bread {
-                padding: 40px 15px;
+                padding: 20px 15px;
             }
             .unselectable {
                 -webkit-touch-callout: none;
@@ -43,6 +46,9 @@
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
+            }
+            input[type=number]{
+                width: 40px;
             }
         </style>
     </head>
@@ -118,10 +124,10 @@
                 <p>
                     <br/>
                     <button id="highBtn" class="btn btn-warning btn-lg btn-block" type="button">
-                        Higher
+                        <i class="fas fa-arrow-up"></i> Higher
                     </button>
                     <button id="lowBtn" class="btn btn-primary btn-lg btn-block" type="button">
-                        Lower
+                        <i class="fas fa-arrow-down"></i> Lower
                     </button>
                 </p>
                 <p>
@@ -132,9 +138,25 @@
                         Turn On
                     </button>
                 </p>
+                <p>
+                    <br/>
+                    <a href="control-center.html" class="btn btn-link">Back to Home</a>
+                </p>
             </div>
         </div>
-        <div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+
+        <!-- /.container -->
+        <div class="footer navbar-fixed-bottom">
+            <p class="text-right">
+                <button class="btn btn-default" data-target="#newScheduleModal" data-toggle="modal">
+                    <span class="glyphicon glyphicon-time">
+                    </span>
+                    Setup Schedule
+                </button>
+            </p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="newScheduleModal" role="dialog" tabindex="-1">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -144,53 +166,113 @@
                             </span>
                         </button>
                         <h4 class="modal-title">
-                            Add to Shortcut
+                            New Schedule
                         </h4>
                     </div>
                     <div class="modal-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    Living Room Lights
-                                </input>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    My Speakers
-                                </input>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox">
-                                    AC Switch
-                                </input>
-                            </li>
-                        </ul>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Set Temp to:
+                            </label>
+                            <select class="form-control">
+                                <option>
+                                    Low Temp (50F)
+                                </option>
+                                <option>
+                                    Cool (60F)
+                                </option>
+                                <option>
+                                    Medium Temp (70F)
+                                </option>
+                                <option>
+                                    High Temp (80F)
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">
+                                Day of the Week
+                            </label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Sunday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Monday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Tuesday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Wednesday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Thursday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Friday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Saturday
+                                    </input>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Time
+                            </label>
+                            <input type="number" value="8"/>:<input type="number" value="30"/>
+                            <select style="width:60">
+                                <option>
+                                    AM
+                                </option>
+                                <option>
+                                    PM
+                                </option>
+                            </select>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-default" data-dismiss="modal" type="button">
-                            Close
+                            Dismiss
                         </button>
                         <button class="btn btn-primary" data-dismiss="modal" type="button">
                             Save
                         </button>
                     </div>
                 </div>
-                <!-- /.modal-content -->
+                    <!-- /.modal-content -->
             </div>
-            <!-- /.modal-dialog -->
+                <!-- /.modal-dialog -->
         </div>
         <!-- /.modal -->
-        <!-- /.container -->
-        <div class="footer navbar-fixed-bottom">
-            <p class="text-right">
-                <button class="btn btn-default" data-target="#myModal" data-toggle="modal">
-                    <span class="glyphicon glyphicon-time">
-                    </span>
-                    Setup Schedule
-                </button>
-            </p>
-        </div>
-        <!-- Page Functions -->
+    <!-- Page Functions -->
     </body>
     <script>
         $(window).ready(function(){
