@@ -45,6 +45,9 @@
         -ms-user-select: none;
         user-select: none;
     }
+    input[type=number]{
+        width: 40px;
+    }
     </style>
 </head>
     <body class="unselectable">
@@ -102,7 +105,7 @@
                     Schedules
                 </h3>
 
-                <div class="panel panel-default">
+                <div class="panel panel-default schedulePan">
                     <div class="panel-body">
                         <h4>Weekday Morning</h4>
                         <h5>At 8:30 am</h5>
@@ -110,7 +113,7 @@
                     </div>
                 </div>
                 
-                <div class="panel panel-default">
+                <div class="panel panel-default schedulePan">
                     <div class="panel-body">
                         <h4>Weekend</h4>
                         <h5>At 10:30 am</h5>
@@ -118,15 +121,161 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default">
+                <div class="panel panel-default schedulePan">
                     <div class="panel-body">
                         <h4>Weekend Evening</h4>
                         <h5>At 11:30 pm</h5>
                         <h4 class="text-muted">Living Room Stand Lamp - Off</h4>
                     </div>
                 </div>
+                <p>
+                    <a class="btn btn-link" href="control-center.html">
+                        Back to Home
+                    </a>
+                </p>
             </div>
         </div>
         <!-- /.container -->
+        <!-- Modal -->
+        <div class="modal fade" id="scheduleModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <h4 class="modal-title">
+                            Edit Schedule
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Action
+                            </label>
+                            <select class="form-control">
+                                <option>
+                                    Turn On
+                                </option>
+                                <option>
+                                    Turn Off
+                                </option>
+                                <option disabled>--</option>
+                                <option>
+                                    Fast Clean (15 min)
+                                </option>
+                                <option>
+                                    Regular Clean (60 min)
+                                </option>
+                                <option>
+                                    Deep Clean (90 min)
+                                </option>
+                                <option disabled>--</option>
+                                <option>
+                                    Low Temp (50F)
+                                </option>
+                                <option>
+                                    Cool (60F)
+                                </option>
+                                <option>
+                                    Medium Temp (70F)
+                                </option>
+                                <option>
+                                    High Temp (80F)
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">
+                                Day of the Week
+                            </label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Sunday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Monday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Tuesday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Wednesday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Thursday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Friday
+                                    </input>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                        Saturday
+                                    </input>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">
+                                Time
+                            </label>
+                            <input type="number" value="8"/>:<input type="number" value="30"/>
+                            <select style="width:60">
+                                <option>
+                                    AM
+                                </option>
+                                <option>
+                                    PM
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal" type="button">
+                            Delete Schedule
+                        </button>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button">
+                            Save & Update
+                        </button>
+                    </div>
+                </div>
+                    <!-- /.modal-content -->
+            </div>
+                <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
     </body>
+    <script>
+        $(window).ready(function(){
+            $('.schedulePan').click(function(){
+                $('#scheduleModal').modal('show');
+            });
+        });
+    </script>
 </html>
