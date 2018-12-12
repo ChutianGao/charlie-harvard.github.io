@@ -15,6 +15,10 @@
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
         <!-- Optional theme -->
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet"/>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+
+
         <!-- Latest compiled and minified JavaScript -->
         <script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
         </script>
@@ -105,11 +109,11 @@
                     <br/>
                     <br/>
                     <br/>
+                    <i class="fab fa-bluetooth-b fa-w-10 fa-3x"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-battery-half fa-w-20 fa-3x"></i>
                     <br/>
                     <br/>
                 <h3>
-                    <span class="muted">
-                        Status:
+                    <span class="text-muted">
                         <span id="status">
                             Offline
                         </span>
@@ -129,7 +133,7 @@
                 <p>
                     <br/>
                     <a class="btn btn-link" href="control-center.html">
-                        Back to Home
+                        <i class="fas fa-home"></i> Back to Home Screen
                     </a>
                 </p>
             </div>
@@ -148,13 +152,13 @@
             $('#offBtn').click(function(){
                 $('#offBtn').hide();
                 $('#onBtn').show();
-                $('#status').html('Off');
+                $('#status').html('Disconnect');
             });
 
             $('#onBtn').click(function(){
                 $('#offBtn').show();
                 $('#onBtn').hide();
-                $('#status').html('On');
+                $('#status').html('Connected');
             });
 
         });

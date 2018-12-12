@@ -111,13 +111,13 @@
                 </h3>
                     <br/>
                     <br/>
-                    
+                    <span class="fas fa-wifi fa-w-20 fa-3x"></span>
                     <br/>
                     <br/>
                 <h3>
-                    <span class="text-muted">Status:
+                    <span class="text-muted">
                         <span id="status">
-                            On
+                            Light On
                         </span>
                     </span>
                     <br/>
@@ -135,7 +135,7 @@
                 <p>
                     <br/>
                     <a class="btn btn-link" href="control-center.html">
-                        Back to Home
+                        <i class="fas fa-home"></i> Back to Home Screen
                     </a>
                 </p>
             </div>
@@ -276,13 +276,13 @@
             $('#offBtn').click(function(){
                 $('#offBtn').hide();
                 $('#onBtn').show();
-                $('#status').html('Off');
+                $('#status').html('Light Off');
             });
 
             $('#onBtn').click(function(){
                 $('#offBtn').show();
                 $('#onBtn').hide();
-                $('#status').html('On');
+                $('#status').html('Light On');
             });
 
         });
