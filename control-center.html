@@ -120,9 +120,64 @@
     </div>
     <!-- /.container -->
     <div class="footer navbar-fixed-bottom">
-        <p class="text-right"><button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Connect New Device</button>
+        <p class="text-right">
+            <button class="btn btn-default" data-target="#newDeviceModal" data-toggle="modal">
+                <span class="glyphicon glyphicon-plus">
+                </span>
+                Add New Device
+            </button>
+        </p>
     </div>
+
+
+    <!-- Modal -->
+        <div class="modal fade" id="newDeviceModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <h4 class="modal-title">
+                            Adding new device ...
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4><small>Nearby Devices</small></h4>
+                        <div class="list-group">
+                        <a href="#" class="list-group-item newDevice">Apple TV (4th gen)</a>
+                        <a href="#" class="list-group-item newDevice">Philips Hue</a>
+                        <a href="#" class="list-group-item newDevice">Smart Chef Oven</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal" type="button">
+                            Cancel
+                        </button>
+                        <button class="btn btn-success" data-dismiss="modal" type="button">
+                            Add selected device
+                        </button>
+                    </div>
+                </div>
+                    <!-- /.modal-content -->
+            </div>
+                <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
     <!-- Page Functions -->
+    <script>
+        $(window).ready(function(){
+            $('.newDevice').click(function(){
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                } else {
+                    $(this).addClass('active');
+                }
+            });
+        });
+    </script>
     
 </body>
 </html>
